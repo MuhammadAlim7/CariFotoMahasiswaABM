@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add error handling for image loading
     imgTarget.onerror = () => {
-      imgTarget.src = "./img/404.svg"; // Path to a default image
+      imgTarget.src = "src/img/404.svg"; // Path to a default image
       npkTarget.textContent = "Not Found"; // Update text if needed
     };
   }
