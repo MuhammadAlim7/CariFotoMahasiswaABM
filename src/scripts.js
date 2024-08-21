@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(inputs);
   function cariMahasiswa() {
     let values = Array.from(inputs).map((input) => input.value || "");
-    let npk = `${values[0]}.${values.slice(1, 5).join("")}.${values[5]}.${values.slice(6).join("")}`;
+    let npk = `${values[0]}.${values.slice(1, 5).join("")}.${values[5]}.${values
+      .slice(6)
+      .join("")}`;
     let imgUrl = `https://scan.stie-mce.ac.id/photo/${npk}.jpg`;
 
     // Set the image source
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add error handling for image loading
     imgTarget.onerror = () => {
-      imgTarget.src = "../img/404.svg"; // Path to a default image
+      imgTarget.src = "./img/404.svg"; // Path to a default image
       npkTarget.textContent = "Not Found"; // Update text if needed
     };
   }
